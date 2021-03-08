@@ -1,8 +1,10 @@
 const { CustomError } = require("@lib/errors");
-const { Author } = require("@lib/sequelize");
+const { Author, parseQuery } = require("@lib/sequelize");
 
 exports.getAuthors = async (req, res) => {
-  const authors = await Author.findAll();
+  const authors = await Author.findAll({
+    ...parseQuery(req),
+  });
 
   res.status(200).json(authors);
 };

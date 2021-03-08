@@ -1,8 +1,10 @@
 const { CustomError } = require("@lib/errors");
-const { Category } = require("@lib/sequelize");
+const { Category, parseQuery } = require("@lib/sequelize");
 
 exports.getCategories = async (req, res) => {
-  const categories = await Category.findAll();
+  const categories = await Category.findAll({
+    ...parseQuery(req),
+  });
 
   res.status(200).json(categories);
 };

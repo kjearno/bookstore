@@ -1,8 +1,9 @@
 const { CustomError } = require("@lib/errors");
-const { Book } = require("@lib/sequelize");
+const { Book, parseQuery } = require("@lib/sequelize");
 
 exports.getBooks = async (req, res) => {
   const books = await Book.findAll({
+    ...parseQuery(req),
     include: ["author"],
   });
 

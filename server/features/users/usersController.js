@@ -1,8 +1,10 @@
 const { CustomError } = require("@lib/errors");
-const { User } = require("@lib/sequelize");
+const { User, parseQuery } = require("@lib/sequelize");
 
 exports.getUsers = async (req, res) => {
-  const users = await User.findAll();
+  const users = await User.findAll({
+    ...parseQuery(req),
+  });
 
   res.status(200).json(users);
 };

@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const appRoot = require("app-root-path");
 const { Sequelize, DataTypes } = require("sequelize");
+const parseQuery = require("./queryParser");
 const testConnection = require("./testConnection");
 
 const env = process.env.NODE_ENV || "development";
@@ -51,6 +52,7 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
+db.parseQuery = parseQuery;
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
