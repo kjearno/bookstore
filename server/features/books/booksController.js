@@ -1,4 +1,4 @@
-const { CustomError } = require("@lib/errors");
+const { AppError } = require("@lib/errors");
 const { Book, parseQuery } = require("@lib/sequelize");
 
 exports.getBooks = async (req, res) => {
@@ -32,7 +32,7 @@ exports.getBook = async (req, res) => {
   });
 
   if (!book) {
-    throw new CustomError(404, `Book with id ${id} not found`);
+    throw new AppError(404, `Book with id ${id} not found`);
   }
 
   res.status(200).json(book);
@@ -43,7 +43,7 @@ exports.updateBook = async (req, res) => {
   const book = await Book.findByPk(id);
 
   if (!book) {
-    throw new CustomError(404, `Book with id ${id} not found`);
+    throw new AppError(404, `Book with id ${id} not found`);
   }
 
   const { title, description, cover, price, authorId, categoryId } = req.body;
@@ -65,7 +65,7 @@ exports.deleteBook = async (req, res) => {
   const book = await Book.findByPk(id);
 
   if (!book) {
-    throw new CustomError(404, `Book with id ${id} not found`);
+    throw new AppError(404, `Book with id ${id} not found`);
   }
 
   await book.destroy();

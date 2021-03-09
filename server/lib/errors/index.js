@@ -1,7 +1,7 @@
-const CustomError = require("./CustomError");
+const AppError = require("./AppError");
 const errorHandler = require("./errorHandler");
 
 module.exports = {
-  CustomError,
+  AppError,
   errorHandler,
 };

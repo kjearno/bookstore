@@ -1,4 +1,4 @@
-const { CustomError } = require("@lib/errors");
+const { AppError } = require("@lib/errors");
 const { Category, parseQuery } = require("@lib/sequelize");
 
 exports.getCategories = async (req, res) => {
@@ -24,7 +24,7 @@ exports.getCategory = async (req, res) => {
   const category = await Category.findByPk(id);
 
   if (!category) {
-    throw new CustomError(404, `Category with id ${id} not found`);
+    throw new AppError(404, `Category with id ${id} not found`);
   }
 
   res.status(200).json(category);
@@ -35,7 +35,7 @@ exports.updateCategory = async (req, res) => {
   const category = await Category.findByPk(id);
 
   if (!category) {
-    throw new CustomError(404, `Category with id ${id} not found`);
+    throw new AppError(404, `Category with id ${id} not found`);
   }
 
   const { name } = req.body;
@@ -52,7 +52,7 @@ exports.deleteCategory = async (req, res) => {
   const category = await Category.findByPk(id);
 
   if (!category) {
-    throw new CustomError(404, `Category with id ${id} not found`);
+    throw new AppError(404, `Category with id ${id} not found`);
   }
 
   await category.destroy();

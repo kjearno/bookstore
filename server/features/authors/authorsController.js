@@ -1,4 +1,4 @@
-const { CustomError } = require("@lib/errors");
+const { AppError } = require("@lib/errors");
 const { Author, parseQuery } = require("@lib/sequelize");
 
 exports.getAuthors = async (req, res) => {
@@ -24,7 +24,7 @@ exports.getAuthor = async (req, res) => {
   const author = await Author.findByPk(id);
 
   if (!author) {
-    throw new CustomError(404, `Author with id ${id} not found`);
+    throw new AppError(404, `Author with id ${id} not found`);
   }
 
   res.status(200).json(author);
@@ -35,7 +35,7 @@ exports.updateAuthor = async (req, res) => {
   const author = await Author.findByPk(id);
 
   if (!author) {
-    throw new CustomError(404, `Author with id ${id} not found`);
+    throw new AppError(404, `Author with id ${id} not found`);
   }
 
   const { name } = req.body;
@@ -52,7 +52,7 @@ exports.deleteAuthor = async (req, res) => {
   const author = await Author.findByPk(id);
 
   if (!author) {
-    throw new CustomError(404, `Author with id ${id} not found`);
+    throw new AppError(404, `Author with id ${id} not found`);
   }
 
   await author.destroy();

@@ -12,7 +12,7 @@ const { booksRouter } = require("@features/books");
 const { categoriesRouter } = require("@features/categories");
 const { usersRouter } = require("@features/users");
 
-const { errorHandler } = require("@lib/errors");
+const { AppError, errorHandler } = require("@lib/errors");
 const { rateLimitHandler } = require("@lib/handlers");
 
 const app = express();
@@ -37,6 +37,10 @@ app.use("/api/authors", authorsRouter);
 app.use("/api/books", booksRouter);
 app.use("/api/categories", categoriesRouter);
 app.use("/api/users", usersRouter);
+
+app.all("*", (req, res) => {
+  throw new AppError(404, `Can't find ${req.originalUrl}`);
+});
 
 app.use(errorHandler);
 

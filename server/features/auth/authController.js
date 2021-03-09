@@ -1,6 +1,6 @@
 const { promisify } = require("util");
 const jwt = require("jsonwebtoken");
-const { CustomError } = require("@lib/errors");
+const { AppError } = require("@lib/errors");
 const { User } = require("@lib/sequelize");
 
 const sendToken = async ({ user, statusCode, req, res }) => {
@@ -33,7 +33,7 @@ const checkToken = async (req) => {
   const token = req.cookies.jwt;
 
   if (!token) {
-    throw new CustomError(401, "You are not authorized");
+    throw new AppError(401, "You are not authorized");
   }
 
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
@@ -51,7 +51,7 @@ exports.login = async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
-    throw new CustomError(400, "Enter username and password");
+    throw new AppError(400, "Enter username and password");
   }
 
   const user = await User.findOne({
@@ -64,7 +64,7 @@ exports.login = async (req, res) => {
   });
 
   if (!user || !(await user.comparePassword(password, user.password))) {
-    throw new CustomError(
+    throw new AppError(
       401,
       "The username or password you entered is incorrect"
     );
