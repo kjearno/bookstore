@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const appRoot = require("app-root-path");
+const pluralize = require("pluralize");
 const { Sequelize, DataTypes } = require("sequelize");
 const parseQuery = require("./queryParser");
 const testConnection = require("./testConnection");
@@ -27,23 +28,23 @@ if (env === "development") {
 
 const featuresDir = path.join(`${appRoot}/features`);
 
-function setModels(feature, matchedModels) {
-  matchedModels.forEach((matchedModel) => {
-    const model = require(path.join(featuresDir, feature, matchedModel))(
-      sequelize,
-      DataTypes
-    );
+function setModel(feature, matchedModel) {
+  const model = require(path.join(featuresDir, feature, matchedModel))(
+    sequelize,
+    DataTypes
+  );
 
-    db[model.name] = model;
-  });
+  db[model.name] = model;
 }
 
 fs.readdirSync(featuresDir).forEach((feature) => {
-  const matchedModels = fs
+  const [matchedModel] = fs
     .readdirSync(path.join(featuresDir, feature))
-    .filter((file) => file.match(/^[A-Z]/));
+    .filter((file) => file === `${pluralize.singular(feature)}.js`);
 
-  setModels(feature, matchedModels);
+  if (matchedModel) {
+    setModel(feature, matchedModel);
+  }
 });
 
 Object.keys(db).forEach((modelName) => {
