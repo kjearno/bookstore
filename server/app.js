@@ -1,5 +1,8 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const rateLimit = require("express-rate-limit");
+const helmet = require("helmet");
+const hpp = require("hpp");
 require("express-async-errors");
 require("module-alias/register");
 
@@ -10,13 +13,23 @@ const { categoriesRouter } = require("@features/categories");
 const { usersRouter } = require("@features/users");
 
 const { errorHandler } = require("@lib/errors");
+const { rateLimitHandler } = require("@lib/handlers");
 
 const app = express();
 
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100,
+  handler: rateLimitHandler,
+});
+
 // 1) Global middleware
+app.use(helmet());
+app.use("/api/", apiLimiter);
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static("public"));
+app.use(hpp());
 
 // 2) API routes
 app.use("/api/auth", authRouter);
