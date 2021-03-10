@@ -6,7 +6,7 @@ const authController = require("./authController");
 const router = Router();
 
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 1000,
   max: 5,
   skipSuccessfulRequests: true,
   handler: rateLimitHandler,

@@ -5,7 +5,7 @@ const path = require("path");
 const appRoot = require("app-root-path");
 const pluralize = require("pluralize");
 const { Sequelize, DataTypes } = require("sequelize");
-const parseQuery = require("./queryParser");
+const parseQuery = require("./parseQuery");
 const testConnection = require("./testConnection");
 
 const env = process.env.NODE_ENV || "development";

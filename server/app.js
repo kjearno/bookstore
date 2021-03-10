@@ -18,7 +18,7 @@ const { rateLimitHandler } = require("@lib/handlers");
 const app = express();
 
 const apiLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 1000,
   max: 100,
   handler: rateLimitHandler,
 });
