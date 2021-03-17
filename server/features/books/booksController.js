@@ -2,34 +2,23 @@ const { AppError } = require("@lib/errors");
 const { Book, parseQuery } = require("@lib/sequelize");
 
 exports.getBooks = async (req, res) => {
-  const books = await Book.findAll({
+  const result = await Book.findAndCountAll({
     ...parseQuery(req),
-    include: ["author"],
   });
 
-  res.status(200).json(books);
+  res.status(200).json(result);
 };
 
 exports.createBook = async (req, res) => {
-  const { title, description, cover, price, authorId, categoryId } = req.body;
-
-  const book = await Book.create({
-    title,
-    description,
-    cover,
-    price,
-    authorId,
-    categoryId,
-  });
+  const book = await Book.create(req.body);
 
   res.status(201).json(book);
 };
 
 exports.getBook = async (req, res) => {
   const { id } = req.params;
-  const book = await Book.findByPk(id, {
-    include: ["author"],
-  });
+
+  const book = await Book.findByPk(id);
 
   if (!book) {
     throw new AppError(404, `Book with id ${id} not found`);
@@ -40,28 +29,21 @@ exports.getBook = async (req, res) => {
 
 exports.updateBook = async (req, res) => {
   const { id } = req.params;
+
   const book = await Book.findByPk(id);
 
   if (!book) {
     throw new AppError(404, `Book with id ${id} not found`);
   }
 
-  const { title, description, cover, price, authorId, categoryId } = req.body;
-
-  await book.update({
-    title,
-    description,
-    cover,
-    price,
-    authorId,
-    categoryId,
-  });
+  await book.update(req.body);
 
   res.status(200).json(book);
 };
 
 exports.deleteBook = async (req, res) => {
   const { id } = req.params;
+
   const book = await Book.findByPk(id);
 
   if (!book) {

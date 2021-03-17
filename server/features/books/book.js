@@ -40,14 +40,16 @@ module.exports = (sequelize, DataTypes) => {
     {
       tableName: "books",
       underscored: true,
+      defaultScope: {
+        include: ["author", "category"],
+      },
     }
   );
 
-  // Associations
+  // associations
   Book.associate = (models) => {
-    Book.belongsTo(models.Author, {
-      as: "author",
-    });
+    Book.belongsTo(models.Author, { as: "author" });
+    Book.belongsTo(models.Category, { as: "category" });
   };
 
   return Book;

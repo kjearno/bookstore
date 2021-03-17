@@ -9,16 +9,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         unique: true,
         validate: {
-          len: [3, 32],
-          notEmpty: true,
+          minLength(username) {
+            if (username.length < 3) {
+              throw new Error("Username must be at least 3 characters");
+            }
+          },
         },
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-          notEmpty: true,
-
           minLength(password) {
             if (password.length < 8) {
               throw new Error("Password must be at least 8 characters");
@@ -38,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
-  // Hooks
+  // hooks
   User.beforeSave(async (user) => {
     if (user.changed("password")) {
       const hash = await bcrypt.hash(user.password, 10);
@@ -46,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
 
-  // Instance methods
+  // instance methods
   User.prototype.comparePassword = async (plainPassword, hashedPassword) =>
     bcrypt.compare(plainPassword, hashedPassword);
 

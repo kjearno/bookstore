@@ -3,32 +3,6 @@ const jwt = require("jsonwebtoken");
 const { AppError } = require("@lib/errors");
 const { User } = require("@lib/sequelize");
 
-const sendToken = async ({ user, statusCode, req, res }) => {
-  const loggedInUser = {
-    id: user.id,
-    username: user.username,
-  };
-
-  const token = await promisify(jwt.sign)(
-    { id: loggedInUser.id },
-    process.env.JWT_SECRET,
-    {
-      expiresIn: process.env.JWT_EXPIRES_IN,
-    }
-  );
-
-  res.cookie("jwt", token, {
-    expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
-    ),
-    httpOnly: true,
-    secure: req.secure || req.headers["x-forwarded-proto"] === "https",
-    sameSite: process.env.NODE_ENV === "production" && "None",
-  });
-
-  res.status(statusCode).json(loggedInUser);
-};
-
 const checkToken = async (req) => {
   const token = req.cookies.jwt;
 
@@ -45,6 +19,36 @@ const checkToken = async (req) => {
   });
 
   return user;
+};
+
+const sendToken = async ({ user, statusCode, req, res }) => {
+  const token = await promisify(jwt.sign)(
+    { id: user.id },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: process.env.JWT_EXPIRES_IN,
+    }
+  );
+
+  res.cookie("jwt", token, {
+    expires: new Date(
+      Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+    ),
+    httpOnly: true,
+    secure: req.secure || req.headers["x-forwarded-proto"] === "https",
+    sameSite: process.env.NODE_ENV === "production" && "None",
+  });
+
+  user.setDataValue("password", undefined);
+
+  res.status(statusCode).json(user);
+};
+
+exports.protect = async (req, res, next) => {
+  const user = await checkToken(req);
+
+  req.user = user;
+  next();
 };
 
 exports.login = async (req, res) => {
@@ -83,9 +87,4 @@ exports.logout = async (req, res) => {
   res.status(200).json({
     status: "success",
   });
-};
-
-exports.protect = async (req, res, next) => {
-  req.user = await checkToken(req);
-  next();
 };

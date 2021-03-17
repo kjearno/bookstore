@@ -2,25 +2,22 @@ const { AppError } = require("@lib/errors");
 const { Author, parseQuery } = require("@lib/sequelize");
 
 exports.getAuthors = async (req, res) => {
-  const authors = await Author.findAll({
+  const result = await Author.findAndCountAll({
     ...parseQuery(req),
   });
 
-  res.status(200).json(authors);
+  res.status(200).json(result);
 };
 
 exports.createAuthor = async (req, res) => {
-  const { name } = req.body;
-
-  const author = await Author.create({
-    name,
-  });
+  const author = await Author.create(req.body);
 
   res.status(201).json(author);
 };
 
 exports.getAuthor = async (req, res) => {
   const { id } = req.params;
+
   const author = await Author.findByPk(id);
 
   if (!author) {
@@ -32,23 +29,21 @@ exports.getAuthor = async (req, res) => {
 
 exports.updateAuthor = async (req, res) => {
   const { id } = req.params;
+
   const author = await Author.findByPk(id);
 
   if (!author) {
     throw new AppError(404, `Author with id ${id} not found`);
   }
 
-  const { name } = req.body;
-
-  await author.update({
-    name,
-  });
+  await author.update(req.body);
 
   res.status(200).json(author);
 };
 
 exports.deleteAuthor = async (req, res) => {
   const { id } = req.params;
+
   const author = await Author.findByPk(id);
 
   if (!author) {
