@@ -14,7 +14,7 @@ const sort = ({ sort: sortField = "id", sortBy = "ASC" }) => [
 
 const paginate = ({ limit = 10, page = 1 }) => {
   if (limit > 100) {
-    throw new AppError(400, 'Query parameter "limit" cannot be more than 100');
+    throw new AppError(400, "Query parameter 'limit' cannot be more than 100");
   }
 
   return {

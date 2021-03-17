@@ -2,7 +2,7 @@ module.exports = {
   development: {
     username: "postgres",
     password: "12345",
-    database: "postgres",
+    database: "bookstore",
     host: "127.0.0.1",
     dialect: "postgres",
   },
@@ -19,5 +19,11 @@ module.exports = {
     database: process.env.DB_DATABASE,
     host: process.env.DB_HOST,
     dialect: "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   },
 };

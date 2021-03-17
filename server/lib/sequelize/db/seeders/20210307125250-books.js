@@ -1,7 +1,3 @@
-const path = require("path");
-
-const BASE_URL = "http://localhost:8000";
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
@@ -11,7 +7,7 @@ module.exports = {
           title: "The Intelligent Investor",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/1.jpg"),
+          cover: "/covers/business/1.jpg",
           price: 4.99,
           author_id: 1,
           category_id: 1,
@@ -22,7 +18,7 @@ module.exports = {
           title: "How to Win Friends & Influence People",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/2.jpg"),
+          cover: "/covers/business/2.jpg",
           price: 6.99,
           author_id: 2,
           category_id: 1,
@@ -33,7 +29,7 @@ module.exports = {
           title: "Bad Blood: Secrets and Lies in a Silicon Valley Startup",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/3.jpg"),
+          cover: "/covers/business/3.jpg",
           price: 12.43,
           author_id: 3,
           category_id: 1,
@@ -45,7 +41,7 @@ module.exports = {
             "Start with Why: How Great Leaders Inspire Everyone to Take Action",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/4.jpg"),
+          cover: "/covers/business/4.jpg",
           price: 12.68,
           author_id: 4,
           category_id: 1,
@@ -56,7 +52,7 @@ module.exports = {
           title: "Think and Grow Rich!",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/5.jpg"),
+          cover: "/covers/business/5.jpg",
           price: 18.23,
           author_id: 5,
           category_id: 1,
@@ -67,7 +63,7 @@ module.exports = {
           title: "The 7 Habits of Highly Effective People",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/6.jpg"),
+          cover: "/covers/business/6.jpg",
           price: 12.35,
           author_id: 6,
           category_id: 1,
@@ -78,7 +74,7 @@ module.exports = {
           title: "The Lean Startup",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/7.jpg"),
+          cover: "/covers/business/7.jpg",
           price: 4.99,
           author_id: 7,
           category_id: 1,
@@ -90,7 +86,7 @@ module.exports = {
             "Good to Great: Why Some Companies Make the Leap and Others Don't",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/business/8.jpg"),
+          cover: "/covers/business/8.jpg",
           price: 6.99,
           author_id: 8,
           category_id: 1,
@@ -101,7 +97,7 @@ module.exports = {
           title: "Pride and Prejudice",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/classic/1.jpg"),
+          cover: "/covers/classic/1.jpg",
           price: 4.99,
           author_id: 9,
           category_id: 2,
@@ -112,7 +108,7 @@ module.exports = {
           title: "To Kill a Mockingbird",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/classic/2.jpg"),
+          cover: "/covers/classic/2.jpg",
           price: 6.99,
           author_id: 10,
           category_id: 2,
@@ -123,7 +119,7 @@ module.exports = {
           title: "The Great Gatsby",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/classic/3.jpg"),
+          cover: "/covers/classic/3.jpg",
           price: 12.43,
           author_id: 11,
           category_id: 2,
@@ -134,7 +130,7 @@ module.exports = {
           title: "And Then There Were None",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/detective/1.jpg"),
+          cover: "/covers/detective/1.jpg",
           price: 4.99,
           author_id: 12,
           category_id: 4,
@@ -145,7 +141,7 @@ module.exports = {
           title: "The Big Sleep",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/detective/2.jpg"),
+          cover: "/covers/detective/2.jpg",
           price: 6.99,
           author_id: 13,
           category_id: 4,
@@ -156,7 +152,7 @@ module.exports = {
           title: "Gone Girl",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/detective/3.jpg"),
+          cover: "/covers/detective/3.jpg",
           price: 12.43,
           author_id: 14,
           category_id: 4,
@@ -167,7 +163,7 @@ module.exports = {
           title: "The Postman Always Rings Twice",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/detective/4.jpg"),
+          cover: "/covers/detective/4.jpg",
           price: 12.68,
           author_id: 15,
           category_id: 4,
@@ -178,7 +174,7 @@ module.exports = {
           title: "The Daughter of Time",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/detective/5.jpg"),
+          cover: "/covers/detective/5.jpg",
           price: 18.23,
           author_id: 16,
           category_id: 4,
@@ -189,7 +185,7 @@ module.exports = {
           title: "Alice’s Adventures in Wonderland",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/1.jpg"),
+          cover: "/covers/fantasy/1.jpg",
           price: 4.99,
           author_id: 17,
           category_id: 5,
@@ -200,7 +196,7 @@ module.exports = {
           title: "The Hobbit",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/2.jpg"),
+          cover: "/covers/fantasy/2.jpg",
           price: 6.99,
           author_id: 18,
           category_id: 5,
@@ -211,7 +207,7 @@ module.exports = {
           title: "The Sword in the Stone",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/3.jpg"),
+          cover: "/covers/fantasy/3.jpg",
           price: 12.43,
           author_id: 19,
           category_id: 5,
@@ -222,7 +218,7 @@ module.exports = {
           title: "The Fellowship of the Ring",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/4.jpg"),
+          cover: "/covers/fantasy/4.jpg",
           price: 12.68,
           author_id: 18,
           category_id: 5,
@@ -233,7 +229,7 @@ module.exports = {
           title: "Watership Down",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/5.jpg"),
+          cover: "/covers/fantasy/5.jpg",
           price: 18.23,
           author_id: 20,
           category_id: 5,
@@ -244,7 +240,7 @@ module.exports = {
           title: "The Dark is Rising",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/6.jpg"),
+          cover: "/covers/fantasy/6.jpg",
           price: 12.35,
           author_id: 21,
           category_id: 5,
@@ -255,7 +251,7 @@ module.exports = {
           title: "The Forgotten Beasts of Eld",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/fantasy/7.jpg"),
+          cover: "/covers/fantasy/7.jpg",
           price: 4.99,
           author_id: 22,
           category_id: 5,
@@ -266,7 +262,7 @@ module.exports = {
           title: "The Three Musketeers",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/adventure/1.jpg"),
+          cover: "/covers/adventure/1.jpg",
           price: 4.99,
           author_id: 23,
           category_id: 6,
@@ -277,7 +273,7 @@ module.exports = {
           title: "Treasure Island",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/adventure/2.jpg"),
+          cover: "/covers/adventure/2.jpg",
           price: 6.99,
           author_id: 24,
           category_id: 6,
@@ -288,7 +284,7 @@ module.exports = {
           title: "Frankenstein",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/horror/1.jpg"),
+          cover: "/covers/horror/1.jpg",
           price: 4.99,
           author_id: 25,
           category_id: 7,
@@ -299,7 +295,7 @@ module.exports = {
           title: "The Fall of the House of Usher and Other Tales",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/horror/2.jpg"),
+          cover: "/covers/horror/2.jpg",
           price: 6.99,
           author_id: 26,
           category_id: 7,
@@ -310,7 +306,7 @@ module.exports = {
           title: "Dracula",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/horror/3.jpg"),
+          cover: "/covers/horror/3.jpg",
           price: 12.43,
           author_id: 27,
           category_id: 7,
@@ -321,7 +317,7 @@ module.exports = {
           title: "At the Mountains of Madness",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/horror/4.jpg"),
+          cover: "/covers/horror/4.jpg",
           price: 12.68,
           author_id: 28,
           category_id: 7,
@@ -332,7 +328,7 @@ module.exports = {
           title: "Rebecca",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/horror/5.jpg"),
+          cover: "/covers/horror/5.jpg",
           price: 18.23,
           author_id: 29,
           category_id: 7,
@@ -343,7 +339,7 @@ module.exports = {
           title: "Something Wicked This Way Comes",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/horror/6.jpg"),
+          cover: "/covers/horror/6.jpg",
           price: 12.35,
           author_id: 30,
           category_id: 7,
@@ -354,7 +350,7 @@ module.exports = {
           title: "Steve Jobs",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/biography/1.jpg"),
+          cover: "/covers/biography/1.jpg",
           price: 4.99,
           author_id: 31,
           category_id: 8,
@@ -365,7 +361,7 @@ module.exports = {
           title: "A Beautiful Mind",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/biography/2.jpg"),
+          cover: "/covers/biography/2.jpg",
           price: 6.99,
           author_id: 32,
           category_id: 8,
@@ -376,7 +372,7 @@ module.exports = {
           title: "Churchill: A Life",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/biography/3.jpg"),
+          cover: "/covers/biography/3.jpg",
           price: 12.43,
           author_id: 33,
           category_id: 8,
@@ -387,7 +383,7 @@ module.exports = {
           title: "Enrique's Journey",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/biography/4.jpg"),
+          cover: "/covers/biography/4.jpg",
           price: 12.68,
           author_id: 34,
           category_id: 8,
@@ -398,7 +394,7 @@ module.exports = {
           title: "Jane Eyre",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/1.jpg"),
+          cover: "/covers/romance-novels/1.jpg",
           price: 4.99,
           author_id: 35,
           category_id: 9,
@@ -409,7 +405,7 @@ module.exports = {
           title: "Maurice",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/2.jpg"),
+          cover: "/covers/romance-novels/2.jpg",
           price: 6.99,
           author_id: 36,
           category_id: 9,
@@ -420,7 +416,7 @@ module.exports = {
           title: "The Princess Bride",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/3.jpg"),
+          cover: "/covers/romance-novels/3.jpg",
           price: 12.43,
           author_id: 37,
           category_id: 9,
@@ -431,7 +427,7 @@ module.exports = {
           title: "Romeo and Juliet",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/4.jpg"),
+          cover: "/covers/romance-novels/4.jpg",
           price: 12.68,
           author_id: 38,
           category_id: 9,
@@ -442,7 +438,7 @@ module.exports = {
           title: "Gone with the Wind",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/5.jpg"),
+          cover: "/covers/romance-novels/5.jpg",
           price: 18.23,
           author_id: 39,
           category_id: 9,
@@ -453,7 +449,7 @@ module.exports = {
           title: "A Walk to Remember",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/6.jpg"),
+          cover: "/covers/romance-novels/6.jpg",
           price: 12.35,
           author_id: 40,
           category_id: 9,
@@ -464,7 +460,7 @@ module.exports = {
           title: "The Thorn Birds",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui quaerat ex vero fugiat! Sequi vel maxime perspiciatis distinctio excepturi eos animi, molestiae eum sit corporis vitae veniam, odit mollitia, quisquam quae facilis impedit cupiditate facere? Architecto rerum minima quidem, velit reiciendis culpa repudiandae atque perspiciatis sequi pariatur fugiat, a autem blanditiis, unde cumque eius aperiam saepe laborum voluptatem iusto? In incidunt consectetur eos aliquam perspiciatis placeat unde, officia quas!",
-          cover: path.join(BASE_URL, "/covers/romance-novels/7.jpg"),
+          cover: "/covers/romance-novels/7.jpg",
           price: 4.99,
           author_id: 41,
           category_id: 9,
