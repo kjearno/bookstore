@@ -40,5 +40,8 @@
   "_moduleAliases": {
     "@features": "features",
     "@lib": "lib"
+  },
+  "engines": {
+    "node": "^14.0.0"
   }
 }
