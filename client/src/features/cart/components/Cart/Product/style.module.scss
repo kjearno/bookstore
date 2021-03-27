@@ -1,0 +1,70 @@
+$button-color: #4c3db2;
+
+.product {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-right: 0;
+    margin-bottom: 4px;
+    object-fit: cover;
+  }
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+
+    img {
+      width: 120px;
+      height: 120px;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.author {
+  display: none;
+  margin-bottom: 4px;
+  color: #5c6a79;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+
+  @media (min-width: 576px) {
+    display: block;
+  }
+}
+
+.title {
+  margin-bottom: 4px;
+  color: #1c2a39;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.price {
+  margin-bottom: 0;
+  color: #1c2a39;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.removeButton {
+  padding: 0;
+  border: 0;
+  color: $button-color;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  transition: color 0.15s;
+
+  &:hover {
+    color: lighten($button-color, 15%);
+  }
+}
