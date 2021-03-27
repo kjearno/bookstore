@@ -1,0 +1,15 @@
+.announcement {
+  margin-bottom: 90px;
+
+  @media (min-width: 992px) {
+    margin-bottom: 180px;
+  }
+}
+
+.main {
+  margin-top: 45px;
+
+  @media (min-width: 992px) {
+    margin-top: 0;
+  }
+}
