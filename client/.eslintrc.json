@@ -13,7 +13,10 @@
   },
   "plugins": ["react"],
   "rules": {
-    "import/prefer-default-export": "off"
+    "consistent-return": "off",
+    "import/no-cycle": "warn",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off"
   },
   "settings": {
     "import/resolver": {
