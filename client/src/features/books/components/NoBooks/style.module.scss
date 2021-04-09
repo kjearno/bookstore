@@ -1,0 +1,8 @@
+.noBooks {
+  margin-top: -10px;
+  margin-bottom: 40px;
+
+  @media (min-width: 992px) {
+    margin-left: 160px;
+  }
+}

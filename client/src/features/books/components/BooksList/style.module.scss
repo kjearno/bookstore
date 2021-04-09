@@ -1,0 +1,17 @@
+.paginationCol {
+  @media (min-width: 992px) {
+    margin-right: 50%;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 992px) {
+    display: block;
+    max-width: 424px;
+    margin-left: auto;
+  }
+}

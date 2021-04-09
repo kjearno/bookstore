@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./style.module.scss";
+import styles from "./Book.module.scss";
 
 export function Book({ data }) {
   return (
     <article className={styles.book}>
-      <img src={data.cover} alt="" />
+      <div className={styles.cover}>
+        <img src={data.cover} alt="" />
+      </div>
       <div className={styles.content}>
-        <p className={styles.author}>{data.author.name}</p>
+        <p className={styles.author}>{data.author?.name}</p>
         <h5 className={styles.title}>{data.title}</h5>
         <p className={styles.description}>{data.description}</p>
         <p className={styles.price}>{`$${data.price}`}</p>

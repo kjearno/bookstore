@@ -1,4 +1,3 @@
-import { Book } from "./components/Book";
-import { BookList } from "./components/BookList";
-
-export { Book, BookList };
+export { default as booksReducer } from "./booksSlice";
+export * from "./booksSlice";
+export * from "./components";
