@@ -4,17 +4,18 @@ $link-active-color: #1c2a39;
 .sidebar {
   position: relative;
   padding-bottom: 40px;
-  padding-left: 20px;
+  padding-left: 7px;
 
   &::before {
     position: absolute;
     z-index: -5;
     top: -40px;
-    left: -130px;
-    width: calc(100% + 260px);
+    left: -50vw;
+    width: calc(100vw + 350%);
     height: calc(100% + 40px);
     background-color: #efeef6;
     content: "";
+    transform: translateX(-50%);
   }
 
   ul {
@@ -42,7 +43,7 @@ $link-active-color: #1c2a39;
     font-weight: 500;
     line-height: 15px;
     text-decoration: none;
-    transition: color 0.15s;
+    transition: all 0.15s;
   }
 
   a:hover {

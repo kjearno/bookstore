@@ -1,29 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import classNames from "classnames/bind";
+import { useCategories } from "@features/categories";
+import { renderContent } from "./renderContent";
 import styles from "./style.module.scss";
 
-const cx = classNames.bind(styles);
-
 export function Sidebar() {
+  const {
+    categories,
+    categoryId,
+    isFirstFetch,
+    onCategoryChange,
+  } = useCategories();
+
   return (
     <aside className={styles.sidebar}>
       <ul>
-        <li className={cx("item", "active")}>
-          <Link to="/">Lorem, ipsum dolor.</Link>
-        </li>
-        <li className={styles.item}>
-          <Link to="/">Lorem, ipsum dolor.</Link>
-        </li>
-        <li className={styles.item}>
-          <Link to="/">Lorem, ipsum dolor.</Link>
-        </li>
-        <li className={styles.item}>
-          <Link to="/">Lorem, ipsum dolor.</Link>
-        </li>
-        <li className={styles.item}>
-          <Link to="/">Lorem, ipsum dolor.</Link>
-        </li>
+        {renderContent({
+          categories,
+          categoryId,
+          isFirstFetch,
+          onCategoryChange,
+        })}
       </ul>
     </aside>
   );

@@ -7,7 +7,6 @@ export function CommonTemplate({ children }) {
   return (
     <Grid>
       <Header />
-
       <main>{children}</main>
     </Grid>
   );

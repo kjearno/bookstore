@@ -1,5 +1,4 @@
-import { Announcement } from "./Announcement";
-import { Header } from "./Header";
-import { Sidebar } from "./Sidebar";
-
-export { Announcement, Header, Sidebar };
+export { Announcement } from "./Announcement";
+export { Header } from "./Header";
+export { Loader } from "./Loader";
+export { Sidebar } from "./Sidebar";
