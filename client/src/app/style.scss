@@ -3,6 +3,8 @@
 @import "~sanitize.css/assets.css";
 @import "~sanitize.css/typography.css";
 
+$link-color: #4c3db2;
+
 h1,
 h2,
 h3,
@@ -42,4 +44,14 @@ pre {
 html,
 body {
   overflow-x: hidden;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.15s;
+
+  &:hover {
+    color: lighten($link-color, 15%);
+  }
 }

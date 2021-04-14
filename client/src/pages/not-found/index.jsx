@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Redirector } from "@shared/components";
 import { CommonTemplate } from "@shared/templates";
 
 export function NotFoundPage() {
@@ -7,7 +8,7 @@ export function NotFoundPage() {
     <CommonTemplate>
       <Helmet title="Not Found" />
 
-      <p>404 Not Found</p>
+      <Redirector message="404 Not Found" />
     </CommonTemplate>
   );
 }
