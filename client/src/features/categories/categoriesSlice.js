@@ -3,7 +3,7 @@ import {
   createEntityAdapter,
   createAsyncThunk,
 } from "@reduxjs/toolkit";
-import { fetchBooks } from "@features/books";
+import { fetchBooks, fetchBook } from "@features/books";
 import {
   IDLE_STATUS,
   LOADING_STATUS,
@@ -111,14 +111,20 @@ const slice = createSlice({
     [fetchPage.fulfilled]: (state, action) => {
       const { categoryIds } = state.pagination;
       const { categoryId, page } = action.meta.arg;
-      const { total, books = [] } = action.payload;
+      const { total, books = {} } = action.payload;
 
       categoryIds[categoryId].totalBooks = total;
-      categoryIds[categoryId].pages[page].bookIds = Object.keys(books);
+      categoryIds[categoryId].pages[page].bookIds = Object.keys(books).map(
+        Number
+      );
       categoryIds[categoryId].pages[page].status = SUCCEEDED_STATUS;
     },
     [fetchBooks.fulfilled]: (state, action) => {
-      const { categories = [] } = action.payload.entities;
+      const { categories = {} } = action.payload.entities;
+      adapter.addMany(state, categories);
+    },
+    [fetchBook.fulfilled]: (state, action) => {
+      const { categories } = action.payload;
       adapter.addMany(state, categories);
     },
   },

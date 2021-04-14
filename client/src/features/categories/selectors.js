@@ -59,6 +59,6 @@ export const selectBooks = createSelector(
   selectAllBooks,
   (page, books) => {
     const { bookIds } = page;
-    return books.filter((book) => bookIds.map(Number).includes(book.id));
+    return books.filter((book) => bookIds.includes(book.id));
   }
 );

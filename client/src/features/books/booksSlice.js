@@ -31,6 +31,13 @@ export const fetchBooks = createAsyncThunk(
   }
 );
 
+export const fetchBook = createAsyncThunk("books/fetchBook", async (id) => {
+  const res = await axios.get(`/books/${id}`);
+  const normalized = normalize(res.data, bookEntity);
+
+  return normalized.entities;
+});
+
 const adapter = createEntityAdapter({
   sortComparer: (a, b) => b.id - a.id,
 });
@@ -50,12 +57,27 @@ const slice = createSlice({
     },
     [fetchBooks.fulfilled]: (state, action) => {
       state.status = SUCCEEDED_STATUS;
-      const { books = [] } = action.payload.entities;
+      const { books = {} } = action.payload.entities;
 
       const editedBooks = limitDescription(books, 100);
       adapter.addMany(state, editedBooks);
     },
     [fetchBooks.rejected]: (state, action) => {
+      state.status = FAILED_STATUS;
+      state.error = action.error;
+    },
+    [fetchBook.pending]: (state) => {
+      state.status = LOADING_STATUS;
+      state.error = null;
+    },
+    [fetchBook.fulfilled]: (state, action) => {
+      state.status = SUCCEEDED_STATUS;
+      const { books } = action.payload;
+
+      const editedBooks = limitDescription(books, 100);
+      adapter.addMany(state, editedBooks);
+    },
+    [fetchBook.rejected]: (state, action) => {
       state.status = FAILED_STATUS;
       state.error = action.error;
     },
