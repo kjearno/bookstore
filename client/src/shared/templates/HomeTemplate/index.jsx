@@ -13,14 +13,16 @@ export function HomeTemplate({ children }) {
         <Announcement />
       </section>
 
-      <Row>
-        <Col lg={2}>
-          <Sidebar />
-        </Col>
-        <Col lg={10}>
-          <main className={styles.main}>{children}</main>
-        </Col>
-      </Row>
+      <section>
+        <Row>
+          <Col lg={2}>
+            <Sidebar />
+          </Col>
+          <Col lg={10}>
+            <main className={styles.main}>{children}</main>
+          </Col>
+        </Row>
+      </section>
     </Grid>
   );
 }

@@ -13,8 +13,8 @@ export const {
 } = adapter.getSelectors((state) => state.categories);
 
 export const selectCategoryId = (state) => state.categories.current;
-export const selectCategoriesStatus = (state) => state.categories.status;
 export const selectPagination = (state) => state.categories.pagination;
+export const selectCategoriesStatus = (state) => state.categories.status;
 
 export const selectPageId = createSelector(
   selectPagination,

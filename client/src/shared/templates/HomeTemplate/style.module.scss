@@ -1,7 +1,9 @@
+@import "@shared/constants/variables.scss";
+
 .announcement {
   margin-bottom: 90px;
 
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     margin-bottom: 180px;
   }
 }
@@ -9,7 +11,7 @@
 .main {
   margin-top: 45px;
 
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     margin-top: 0;
   }
 }

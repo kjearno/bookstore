@@ -1,3 +1,5 @@
+@import "@shared/constants/variables.scss";
+
 $link-color: #5c6a79;
 $link-active-color: #1c2a39;
 
@@ -24,7 +26,7 @@ $link-active-color: #1c2a39;
     list-style: none;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: $breakpoint-sm) {
     padding-left: 0;
   }
 }

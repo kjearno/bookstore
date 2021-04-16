@@ -1,8 +1,10 @@
+@import "@shared/constants/variables.scss";
+
 .noBooks {
   margin-top: -10px;
   margin-bottom: 40px;
 
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     margin-left: 160px;
   }
 }

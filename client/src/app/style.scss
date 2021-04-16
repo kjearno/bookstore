@@ -2,8 +2,7 @@
 @import "~sanitize.css/forms.css";
 @import "~sanitize.css/assets.css";
 @import "~sanitize.css/typography.css";
-
-$link-color: #4c3db2;
+@import "@shared/constants/variables.scss";
 
 h1,
 h2,
@@ -47,11 +46,11 @@ body {
 }
 
 a {
-  color: $link-color;
+  color: $primary-color;
   text-decoration: none;
   transition: color 0.15s;
 
   &:hover {
-    color: lighten($link-color, 15%);
+    color: lighten($primary-color, 15%);
   }
 }

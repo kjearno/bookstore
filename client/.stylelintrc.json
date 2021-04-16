@@ -11,6 +11,12 @@
       "declarations",
       "rules",
       "at-rules"
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
     ]
   }
 }

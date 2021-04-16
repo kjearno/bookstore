@@ -12,16 +12,20 @@ export const renderContent = ({
   isFirstFetch,
   onCategoryChange,
 }) => {
-  let content = categories.map((category) => (
-    <li
-      className={cx("item", { active: category.id === categoryId })}
-      key={category.id}
-    >
-      <Link to="/" onClick={() => onCategoryChange(category.id)}>
-        {category.name}
-      </Link>
-    </li>
-  ));
+  let content = (
+    <ul>
+      {categories.map((category) => (
+        <li
+          className={cx("item", { active: category.id === categoryId })}
+          key={category.id}
+        >
+          <Link to="/" onClick={() => onCategoryChange(category.id)}>
+            {category.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
 
   if (isFirstFetch) {
     content = <Loader />;

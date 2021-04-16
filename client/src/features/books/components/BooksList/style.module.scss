@@ -1,5 +1,7 @@
+@import "@shared/constants/variables.scss";
+
 .paginationCol {
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     margin-right: 50%;
   }
 }
@@ -9,7 +11,7 @@
   justify-content: center;
   margin-bottom: 20px;
 
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     display: block;
     max-width: 424px;
     margin-left: auto;

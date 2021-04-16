@@ -13,14 +13,12 @@ export function Sidebar() {
 
   return (
     <aside className={styles.sidebar}>
-      <ul>
-        {renderContent({
-          categories,
-          categoryId,
-          isFirstFetch,
-          onCategoryChange,
-        })}
-      </ul>
+      {renderContent({
+        categories,
+        categoryId,
+        isFirstFetch,
+        onCategoryChange,
+      })}
     </aside>
   );
 }

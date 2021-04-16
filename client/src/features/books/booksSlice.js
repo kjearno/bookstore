@@ -11,7 +11,7 @@ import {
   FAILED_STATUS,
 } from "@shared/constants";
 import { axios } from "@shared/lib";
-import { limitDescription } from "./lib/limitDescription";
+import { limitDescription } from "./lib";
 
 const categoryEntity = new schema.Entity("categories");
 const bookEntity = new schema.Entity("books", {

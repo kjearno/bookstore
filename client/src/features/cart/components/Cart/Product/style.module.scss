@@ -1,4 +1,4 @@
-$button-color: #4c3db2;
+@import "@shared/constants/variables.scss";
 
 .product {
   display: flex;
@@ -13,7 +13,7 @@ $button-color: #4c3db2;
     object-fit: cover;
   }
 
-  @media (min-width: 576px) {
+  @media (min-width: $breakpoint-sm) {
     flex-direction: row;
 
     img {
@@ -37,7 +37,7 @@ $button-color: #4c3db2;
   font-size: 10px;
   line-height: 14px;
 
-  @media (min-width: 576px) {
+  @media (min-width: $breakpoint-sm) {
     display: block;
   }
 }
@@ -65,13 +65,13 @@ $button-color: #4c3db2;
 .removeButton {
   padding: 0;
   border: 0;
-  color: $button-color;
+  color: $primary-color;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   transition: color 0.15s;
 
   &:hover {
-    color: lighten($button-color, 15%);
+    color: lighten($primary-color, 15%);
   }
 }
