@@ -7,7 +7,7 @@ import "./style.scss";
 
 export function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <ToastProvider autoDismiss>
         <Pages />
