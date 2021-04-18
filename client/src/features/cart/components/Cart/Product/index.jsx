@@ -5,9 +5,10 @@ import styles from "./style.module.scss";
 
 export function Product({ data }) {
   const {
-    quantity,
+    value,
     subtotalPrice,
     onItemRemove,
+    onValueChange,
     onQuantityChange,
   } = useProduct(data.id);
 
@@ -31,7 +32,13 @@ export function Product({ data }) {
         </div>
       </td>
       <td>
-        <input type="number" value={quantity} onChange={onQuantityChange} />
+        <input
+          type="number"
+          value={value}
+          onChange={onValueChange}
+          onBlur={onQuantityChange}
+          onKeyDown={onQuantityChange}
+        />
       </td>
       <td>{`$${subtotalPrice}`}</td>
     </tr>

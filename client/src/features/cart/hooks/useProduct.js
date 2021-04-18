@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   itemRemoved,
@@ -13,20 +14,33 @@ export const useProduct = (productId) => {
     selectSubtotalPrice(state, productId)
   );
 
+  const [value, setValue] = useState(quantity);
+
   const handleItemRemove = () => {
     dispatch(itemRemoved(productId));
   };
 
+  const handleValueChange = (e) => {
+    if (e.currentTarget.value < 0) {
+      return;
+    }
+
+    setValue(e.currentTarget.value);
+  };
+
   const handleQuantityChange = (e) => {
-    dispatch(
-      quantityChanged({ itemId: productId, quantity: e.currentTarget.value })
-    );
+    if (e.type === "keydown" && e.key !== "Enter") {
+      return;
+    }
+
+    dispatch(quantityChanged({ itemId: productId, quantity: value }));
   };
 
   return {
-    quantity,
+    value,
     subtotalPrice,
     onItemRemove: handleItemRemove,
+    onValueChange: handleValueChange,
     onQuantityChange: handleQuantityChange,
   };
 };

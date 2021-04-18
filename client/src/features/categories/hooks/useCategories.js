@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { scroller } from "react-scroll";
 import { LOADING_STATUS } from "@shared/constants";
 import {
   fetchCategories,
@@ -8,6 +9,7 @@ import {
   selectTotalCategories,
   selectCategoryId,
   selectCategoriesStatus,
+  selectPageVisibility,
 } from "../categoriesSlice";
 
 export const useCategories = () => {
@@ -16,6 +18,7 @@ export const useCategories = () => {
   const totalCategories = useSelector(selectTotalCategories);
   const categoryId = useSelector(selectCategoryId);
   const status = useSelector(selectCategoriesStatus);
+  const isPageVisible = useSelector(selectPageVisibility);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -23,6 +26,10 @@ export const useCategories = () => {
 
   const handleCategoryChange = (id) => {
     dispatch(categoryChanged(id));
+
+    if (!isPageVisible) {
+      scroller.scrollTo("BooksListContent", { smooth: true });
+    }
   };
 
   return {

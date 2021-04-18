@@ -21,6 +21,11 @@ export const selectPageId = createSelector(
   (pagination) => pagination.currentPage
 );
 
+export const selectPageVisibility = createSelector(
+  selectPagination,
+  (pagination) => pagination.isVisible
+);
+
 export const selectTotalBooks = createSelector(
   selectCategoryId,
   selectPagination,

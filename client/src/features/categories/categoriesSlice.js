@@ -63,7 +63,7 @@ const adapter = createEntityAdapter();
 
 const initialState = adapter.getInitialState({
   current: 1,
-  pagination: { currentPage: 1, categoryIds: {} },
+  pagination: { currentPage: 1, isVisible: false, categoryIds: {} },
   status: IDLE_STATUS,
   error: null,
 });
@@ -80,6 +80,9 @@ const slice = createSlice({
     },
     pageChanged: (state, action) => {
       state.pagination.currentPage = action.payload;
+    },
+    pageVisibilityChanged: (state, action) => {
+      state.pagination.isVisible = action.payload;
     },
   },
   extraReducers: {
@@ -132,6 +135,10 @@ const slice = createSlice({
 
 export default slice.reducer;
 
-export const { categoryChanged, pageChanged } = slice.actions;
+export const {
+  categoryChanged,
+  pageChanged,
+  pageVisibilityChanged,
+} = slice.actions;
 
 export * from "./selectors";

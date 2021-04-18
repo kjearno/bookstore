@@ -5,6 +5,7 @@ import { SUCCEEDED_STATUS } from "@shared/constants";
 import {
   fetchPage,
   pageChanged,
+  pageVisibilityChanged,
   selectCategoryId,
   selectPageId,
   selectTotalBooks,
@@ -29,6 +30,10 @@ export const usePage = () => {
     scroller.scrollTo("BooksListContent");
   };
 
+  const handleVisibilityChange = (isVisible) => {
+    dispatch(pageVisibilityChanged(isVisible));
+  };
+
   return {
     books,
     totalBooks,
@@ -37,5 +42,6 @@ export const usePage = () => {
     noBooks: status === SUCCEEDED_STATUS && !totalBooks,
     pageSize: 6,
     onPageChange: handlePageChange,
+    onVisibilityChange: handleVisibilityChange,
   };
 };
