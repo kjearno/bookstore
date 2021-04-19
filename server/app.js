@@ -1,5 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
 const hpp = require("hpp");
@@ -26,6 +27,7 @@ const apiLimiter = rateLimit({
 // 1) Global middleware
 app.use(helmet());
 app.use("/api/", apiLimiter);
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.static("public"));
