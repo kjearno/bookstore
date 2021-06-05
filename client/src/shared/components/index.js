@@ -1,4 +1,5 @@
 export { Announcement } from "./Announcement";
+export { Book } from "./Book";
 export { Header } from "./Header";
 export { Loader } from "./Loader";
 export { Pagination } from "./Pagination";

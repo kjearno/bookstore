@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { BooksList } from "@features/books";
+import { Category } from "@features/category";
 import { HomeTemplate } from "@shared/templates";
 
 export function HomePage() {
@@ -8,7 +8,7 @@ export function HomePage() {
     <HomeTemplate>
       <Helmet title="Home" />
 
-      <BooksList />
+      <Category />
     </HomeTemplate>
   );
 }

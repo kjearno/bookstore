@@ -1,10 +1,11 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { fetchBook } from "@features/books";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import { fetchBook } from "@features/entities";
 import {
   IDLE_STATUS,
   LOADING_STATUS,
   SUCCEEDED_STATUS,
-  FAILED_STATUS,
 } from "@shared/constants";
 import { selectIds, selectStatus } from "./selectors";
 
@@ -23,7 +24,7 @@ export const fetchItems = createAsyncThunk(
     condition: (_, { getState }) => {
       const status = selectStatus(getState());
 
-      if (status === LOADING_STATUS || status === SUCCEEDED_STATUS) {
+      if (status === SUCCEEDED_STATUS) {
         return false;
       }
     },
@@ -34,7 +35,6 @@ const initialState = {
   ids: [],
   items: {},
   status: IDLE_STATUS,
-  error: null,
 };
 
 const slice = createSlice({
@@ -74,19 +74,12 @@ const slice = createSlice({
   extraReducers: {
     [fetchItems.pending]: (state) => {
       state.status = LOADING_STATUS;
-      state.error = null;
     },
     [fetchItems.fulfilled]: (state) => {
       state.status = SUCCEEDED_STATUS;
     },
-    [fetchItems.rejected]: (state, action) => {
-      state.status = FAILED_STATUS;
-      state.error = action.error;
-    },
   },
 });
-
-export default slice.reducer;
 
 export const {
   itemToggled,
@@ -96,3 +89,13 @@ export const {
 } = slice.actions;
 
 export * from "./selectors";
+
+export default persistReducer(
+  {
+    key: "cart",
+    storage,
+    whitelist: ["ids", "items"],
+    keyPrefix: "bookstore:",
+  },
+  slice.reducer
+);

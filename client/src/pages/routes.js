@@ -1,5 +1,5 @@
-import { HomePage } from "./home";
 import { CartPage } from "./cart";
+import { HomePage } from "./home";
 import { NotFoundPage } from "./not-found";
 
 export const routes = [

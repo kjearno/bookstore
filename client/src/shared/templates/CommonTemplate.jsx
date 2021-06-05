@@ -13,8 +13,5 @@ export function CommonTemplate({ children }) {
 }
 
 CommonTemplate.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element,
-  ]).isRequired,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };

@@ -1,28 +1,28 @@
 import React from "react";
-import LoadingSkeleton from "react-loading-skeleton";
-import styles from "./Book.module.scss";
+import Skeleton from "react-loading-skeleton";
+import styles from "./style.module.scss";
 
-export function Skeleton() {
+export function Loader() {
   return (
     <article className={styles.book}>
       <div className={styles.cover} style={{ boxShadow: "none" }}>
-        <LoadingSkeleton height="100%" />
+        <Skeleton height="100%" />
       </div>
       <div className={styles.content}>
         <p className={styles.author}>
-          <LoadingSkeleton />
+          <Skeleton />
         </p>
         <h5 className={styles.title}>
-          <LoadingSkeleton />
+          <Skeleton />
         </h5>
         <p className={styles.description}>
-          <LoadingSkeleton count={3} />
+          <Skeleton count={3} />
         </p>
         <p className={styles.price}>
-          <LoadingSkeleton />
+          <Skeleton />
         </p>
 
-        <LoadingSkeleton height={45} />
+        <Skeleton height={45} />
       </div>
     </article>
   );

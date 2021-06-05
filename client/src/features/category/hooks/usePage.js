@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { scroller } from "react-scroll";
-import { SUCCEEDED_STATUS } from "@shared/constants";
+import { LOADING_STATUS, SUCCEEDED_STATUS } from "@shared/constants";
 import {
   fetchPage,
   pageChanged,
@@ -11,10 +11,11 @@ import {
   selectTotalBooks,
   selectPageStatus,
   selectBooks,
-} from "../categoriesSlice";
+} from "../categorySlice";
 
 export const usePage = () => {
   const dispatch = useDispatch();
+
   const categoryId = useSelector(selectCategoryId);
   const pageId = useSelector(selectPageId);
   const totalBooks = useSelector(selectTotalBooks);
@@ -27,7 +28,7 @@ export const usePage = () => {
 
   const handlePageChange = (id) => {
     dispatch(pageChanged(id));
-    scroller.scrollTo("BooksListContent");
+    scroller.scrollTo("CategoryContent");
   };
 
   const handleVisibilityChange = (isVisible) => {
@@ -37,7 +38,7 @@ export const usePage = () => {
   return {
     books,
     totalBooks,
-    status,
+    isLoading: status === LOADING_STATUS,
     pageId,
     noBooks: status === SUCCEEDED_STATUS && !totalBooks,
     pageSize: 6,

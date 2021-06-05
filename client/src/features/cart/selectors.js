@@ -1,5 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { selectAllBooks } from "@features/books";
+import { selectAllBooks } from "@features/entities";
 
 export const selectIds = (state) => state.cart.ids;
 export const selectStatus = (state) => state.cart.status;
@@ -8,7 +8,7 @@ export const selectTotalItems = createSelector(selectIds, (ids) => ids.length);
 
 export const selectQuantity = createSelector(
   (state, id) => state.cart.items[id],
-  (item) => item?.quantity
+  (item) => item.quantity
 );
 
 export const selectProducts = createSelector(

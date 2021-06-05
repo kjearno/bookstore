@@ -6,9 +6,7 @@ import { IDLE_STATUS, LOADING_STATUS } from "@shared/constants";
 import { confirmAlert } from "@shared/lib";
 import {
   fetchItems,
-  itemToggled,
   cartCleared,
-  selectIds,
   selectProducts,
   selectStatus,
   selectTotalItems,
@@ -17,24 +15,17 @@ import {
 
 export const useCart = () => {
   const dispatch = useDispatch();
-  const itemIds = useSelector(selectIds);
+  const history = useHistory();
+  const { addToast } = useToasts();
+
   const items = useSelector(selectProducts);
   const status = useSelector(selectStatus);
   const totalItems = useSelector(selectTotalItems);
   const totalPrice = useSelector(selectTotalPrice);
 
-  const history = useHistory();
-  const { addToast } = useToasts();
-
   useEffect(() => {
     dispatch(fetchItems());
-  }, [dispatch, items]);
-
-  const checkItemInCart = (id) => itemIds.includes(id);
-
-  const handleItemToggle = (id) => {
-    dispatch(itemToggled(id));
-  };
+  }, [dispatch]);
 
   const handleOrderClick = () => {
     confirmAlert({
@@ -58,10 +49,8 @@ export const useCart = () => {
   return {
     items,
     totalPrice,
-    checkItemInCart,
     isLoading: status === IDLE_STATUS || status === LOADING_STATUS,
     isCartEmpty: !totalItems,
-    onItemToggle: handleItemToggle,
     onOrderClick: handleOrderClick,
   };
 };

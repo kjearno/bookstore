@@ -9,6 +9,7 @@ import {
 
 export const useProduct = (productId) => {
   const dispatch = useDispatch();
+
   const quantity = useSelector((state) => selectQuantity(state, productId));
   const subtotalPrice = useSelector((state) =>
     selectSubtotalPrice(state, productId)

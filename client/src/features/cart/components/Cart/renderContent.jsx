@@ -21,7 +21,14 @@ export const renderContent = ({
       </thead>
       <tbody>
         {items.map((item) => (
-          <Product data={item} key={item.id} />
+          <Product
+            id={item.id}
+            cover={item.cover}
+            author={item.author}
+            title={item.title}
+            price={item.price}
+            key={item.id}
+          />
         ))}
       </tbody>
       <tfoot>
