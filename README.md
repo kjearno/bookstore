@@ -1,26 +1,10 @@
 # bookstore
 
-bookstore is a full-stack web application which includes a REST API server written in Node.js, Express, PostgreSQL, and a client written in React and Redux.
-
 **DEMO: [komilt.github.io/bookstore](https://komilt.github.io/bookstore)**
 
-![](https://user-images.githubusercontent.com/39556179/115168007-fb9ed980-a0d2-11eb-8e8a-50e1c728ffb9.png)
+![](https://user-images.githubusercontent.com/39556179/120910219-74afbb80-c696-11eb-9c6f-24094e32ef44.png)
 
-## Content
-
-- [Getting Started](#getting-started)
-- [client](#client)
-  - [Features](#client-features)
-  - [Installation](#client-installation)
-  - [Usage](#client-usage)
-  - [Routes](#client-routes)
-- [server](#server)
-  - [Features](#server-features)
-  - [Installation](#server-installation)
-  - [Usage](#server-usage)
-  - [API](#server-api)
-
-## <a name="getting-started"></a> Getting Started
+## Getting Started
 
 1. Clone the repo:
 
@@ -34,14 +18,14 @@ $ git clone https://github.com/KomilT/bookstore.git
 $ cd bookstore
 ```
 
-## <a name="client"></a> client
+## client
 
-### <a name="client-features"></a> Features
+### Features
 
 - React
 - Redux
 
-### <a name="client-installation"></a> Installation
+### Installation
 
 1. Go to the client folder:
 
@@ -55,7 +39,7 @@ $ cd client
 $ npm install
 ```
 
-### <a name="client-usage"></a> Usage
+### Usage
 
 #### Development server:
 
@@ -75,7 +59,7 @@ $ npm run build
 $ npm run deploy
 ```
 
-### <a name="client-routes"></a> Routes
+### Routes
 
 #### Home:
 
@@ -89,15 +73,15 @@ $ npm run deploy
 
 > [komilt.github.io/bookstore/:anything](https://komilt.github.io/bookstore/:anything)
 
-## <a name="server"></a> server
+## server
 
-### <a name="server-features"></a> Features
+### Features
 
 - Node.js
 - Express
 - PostgreSQL
 
-### <a name="server-installation"></a> Installation
+### Installation
 
 1. Go to the server folder:
 
@@ -111,7 +95,7 @@ $ cd server
 $ npm install
 ```
 
-### <a name="server-usage"></a> Usage
+### Usage
 
 #### Development server:
 
@@ -125,17 +109,7 @@ $ npm run dev
 $ npm start
 ```
 
-### <a name="server-api"></a> API
-
-#### Query examples
-
-##### Get all books:
-
-> [bookstore-73510.herokuapp.com/api/books](https://bookstore-73510.herokuapp.com/api/books)
-
-##### Get author with id 1:
-
-> [bookstore-73510.herokuapp.com/api/authors/1](https://bookstore-73510.herokuapp.com/api/authors/1)
+### API
 
 #### Endpoints
 
@@ -175,3 +149,13 @@ $ npm start
 `GET /users/:id`<br>
 `PATCH /users/:id`<br>
 `DELETE /users/:id`
+
+#### Query examples
+
+##### Get all books:
+
+> [bookstore-73510.herokuapp.com/api/books](https://bookstore-73510.herokuapp.com/api/books)
+
+##### Get book by id:
+
+> [bookstore-73510.herokuapp.com/api/books/1](https://bookstore-73510.herokuapp.com/api/books/1)
