@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useProduct } from "../../../hooks";
-import styles from "./style.module.scss";
+import styles from "./Product.module.scss";
 
 export function Product({ id, cover, author, title, price }) {
   const {

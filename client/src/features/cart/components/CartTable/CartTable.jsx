@@ -1,16 +1,21 @@
 import React from "react";
 import { Loader, Redirector } from "@shared/components";
+import { useCart } from "../../hooks";
 import { Product } from "./Product";
-import styles from "./style.module.scss";
+import styles from "./CartTable.module.scss";
 
-export const renderContent = ({
-  items,
-  totalPrice,
-  isLoading,
-  isCartEmpty,
-  onOrderClick,
-}) => {
-  let content = (
+export function CartTable() {
+  const { items, totalPrice, isLoading, isCartEmpty, onOrderClick } = useCart();
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isCartEmpty) {
+    return <Redirector message="Cart is empty" />;
+  }
+
+  return (
     <table className={styles.table}>
       <thead>
         <tr>
@@ -53,14 +58,4 @@ export const renderContent = ({
       </tfoot>
     </table>
   );
-
-  if (isLoading) {
-    content = <Loader />;
-  }
-
-  if (isCartEmpty) {
-    content = <Redirector message="Cart is empty" />;
-  }
-
-  return content;
-};
+}

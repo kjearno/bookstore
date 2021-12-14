@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { Redirector } from "@shared/components";
 import { CommonTemplate } from "@shared/templates";
 
-export function NotFoundPage() {
+export default function NotFound() {
   return (
     <CommonTemplate>
       <Helmet title="Not Found" />

@@ -1,16 +1,19 @@
+import "@shared/styles/globals.scss";
 import React from "react";
+import { Helmet } from "react-helmet";
+import { renderRoutes } from "react-router-config";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ToastProvider } from "react-toast-notifications";
-import { Pages } from "@pages";
 import { ScrollToTop } from "@shared/components";
-import "./style.scss";
+import routes from "./_routes";
 
-export function App() {
+export default function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <ToastProvider autoDismiss>
-        <Pages />
+        <Helmet defaultTitle="bookstore" titleTemplate="%s — bookstore" />
+        {renderRoutes(routes)}
       </ToastProvider>
     </Router>
   );

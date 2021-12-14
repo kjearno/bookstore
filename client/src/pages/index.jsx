@@ -1,13 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { renderRoutes } from "react-router-config";
-import { routes } from "./routes";
+import { Category } from "@features/category";
+import { HomeTemplate } from "@shared/templates";
 
-export function Pages() {
+export default function Home() {
   return (
-    <>
-      <Helmet defaultTitle="bookstore" titleTemplate="%s — bookstore" />
-      {renderRoutes(routes)}
-    </>
+    <HomeTemplate>
+      <Helmet title="Home" />
+
+      <Category />
+    </HomeTemplate>
   );
 }
