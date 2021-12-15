@@ -47,8 +47,8 @@
 .description {
   color: #5c6a79;
   font-family: "Open Sans", sans-serif;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 0.625rem;
+  line-height: 1.4;
 }
 
 .author {
@@ -68,9 +68,9 @@
   margin-bottom: 8px;
   color: #1c2a39;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -83,9 +83,9 @@
   margin-bottom: 8px;
   color: #1c2a39;
   font-family: "Montserrat", sans-serif;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1.23;
 
   @media (min-width: $breakpoint-sm) {
     margin-bottom: 16px;
@@ -100,9 +100,9 @@
   color: $primary-color;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 0.5rem;
   font-weight: 700;
-  line-height: 10px;
+  line-height: 1.25;
   text-transform: uppercase;
   transition: transform 0.15s;
 

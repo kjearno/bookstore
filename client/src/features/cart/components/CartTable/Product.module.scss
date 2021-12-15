@@ -34,8 +34,8 @@
   margin-bottom: 4px;
   color: #5c6a79;
   font-family: "Open Sans", sans-serif;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 0.625rem;
+  line-height: 1.4;
 
   @media (min-width: $breakpoint-sm) {
     display: block;
@@ -46,9 +46,9 @@
   margin-bottom: 4px;
   color: #1c2a39;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -58,8 +58,8 @@
   margin-bottom: 0;
   color: #1c2a39;
   font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 0.8125rem;
+  line-height: 1.23;
 }
 
 .removeButton {
@@ -68,7 +68,7 @@
   color: $primary-color;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   transition: color 0.15s;
 
   &:hover {
