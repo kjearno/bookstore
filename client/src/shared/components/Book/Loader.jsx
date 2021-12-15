@@ -1,6 +1,6 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
-import styles from "./style.module.scss";
+import styles from "./Book.module.scss";
 
 export function Loader() {
   return (

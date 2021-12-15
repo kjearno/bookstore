@@ -1,8 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
+
 import { Announcement, Header, Sidebar } from "@shared/components";
-import styles from "./style.module.scss";
+import styles from "./HomeTemplate.module.scss";
 
 export function HomeTemplate({ children }) {
   return (

@@ -1,7 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./style.module.scss";
+
+import styles from "./Redirector.module.scss";
 
 export function Redirector({ message }) {
   return (

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { scroller } from "react-scroll";
+
 import { LOADING_STATUS, SUCCEEDED_STATUS } from "@shared/constants";
 import {
   fetchPage,

@@ -1,6 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import { Grid } from "react-flexbox-grid";
+
 import { Header } from "@shared/components";
 
 export function CommonTemplate({ children }) {

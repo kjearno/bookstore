@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { renderRoutes } from "react-router-config";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ToastProvider } from "react-toast-notifications";
+
 import { ScrollToTop } from "@shared/components";
 import routes from "./_routes";
 

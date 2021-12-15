@@ -1,12 +1,12 @@
 import React from "react";
 import { Row, Col } from "react-flexbox-grid";
-import VisibilitySensor from "react-visibility-sensor";
 import { Element } from "react-scroll";
+import VisibilitySensor from "react-visibility-sensor";
+
 import { Pagination } from "@shared/components";
 import { usePage } from "../../hooks";
-import { NoBooks } from "./NoBooks";
 import { renderContent } from "./renderContent";
-import styles from "./style.module.scss";
+import styles from "./Category.module.scss";
 
 export function Category() {
   const {
@@ -21,7 +21,7 @@ export function Category() {
   } = usePage();
 
   if (noBooks) {
-    return <NoBooks />;
+    return <p className={styles.noBooks}>No books</p>;
   }
 
   return (

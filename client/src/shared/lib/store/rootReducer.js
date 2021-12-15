@@ -1,4 +1,5 @@
 import { combineReducers } from "@reduxjs/toolkit";
+
 import { cartReducer } from "@features/cart";
 import { categoryReducer } from "@features/category";
 import { entitiesReducer } from "@features/entities";

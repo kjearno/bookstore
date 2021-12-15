@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./style.module.scss";
+import styles from "./Logo.module.scss";
 
 export function Logo() {
   return (

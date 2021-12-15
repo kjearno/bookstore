@@ -1,8 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
+
 import { useItem } from "@features/cart";
 import { Loader } from "./Loader";
-import styles from "./style.module.scss";
+import styles from "./Book.module.scss";
 
 export function Book({ id, cover, author, title, description, price }) {
   const { isAddedToCart, onItemToggle } = useItem(id);

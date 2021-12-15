@@ -1,7 +1,8 @@
 import React from "react";
+
 import { Controls } from "./Controls";
 import { Logo } from "./Logo";
-import styles from "./style.module.scss";
+import styles from "./Header.module.scss";
 
 export function Header() {
   return (

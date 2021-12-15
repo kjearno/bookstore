@@ -1,6 +1,6 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { useProduct } from "../../../hooks";
+import React from "react";
+import { useProduct } from "../../hooks";
 import styles from "./Product.module.scss";
 
 export function Product({ id, cover, author, title, price }) {

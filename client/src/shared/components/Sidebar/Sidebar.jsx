@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "./Menu";
-import styles from "./style.module.scss";
+import styles from "./Sidebar.module.scss";
 
 export function Sidebar() {
   return (

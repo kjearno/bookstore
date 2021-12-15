@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Loader, Redirector } from "@shared/components";
 import { useCart } from "../../hooks";
 import { Product } from "./Product";

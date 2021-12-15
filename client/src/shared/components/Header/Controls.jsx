@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cart from "@shared/assets/cart.svg";
-import styles from "./style.module.scss";
+import styles from "./Controls.module.scss";
 
 export function Controls() {
   return (
