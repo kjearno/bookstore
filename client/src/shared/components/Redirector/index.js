@@ -1,1 +1,0 @@
-export { Redirector } from "./Redirector";
