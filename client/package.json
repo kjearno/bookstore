@@ -2,7 +2,7 @@
   "name": "bookstore-client",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://komilt.github.io/bookstore",
+  "homepage": "https://kjearno.github.io/bookstore",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@reduxjs/toolkit": "^1.5.1",

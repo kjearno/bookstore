@@ -1,6 +1,6 @@
 # bookstore
 
-**DEMO: [komilt.github.io/bookstore](https://komilt.github.io/bookstore)**
+**DEMO: [kjearno.github.io/bookstore](https://kjearno.github.io/bookstore)**
 
 ![](https://user-images.githubusercontent.com/39556179/120910219-74afbb80-c696-11eb-9c6f-24094e32ef44.png)
 
@@ -9,7 +9,7 @@
 1. Clone the repo:
 
 ```sh
-$ git clone https://github.com/KomilT/bookstore.git
+$ git clone https://github.com/kjearno/bookstore.git
 ```
 
 2. Go to the project folder:
@@ -63,15 +63,15 @@ $ npm run deploy
 
 #### Home:
 
-> [komilt.github.io/bookstore](https://komilt.github.io/bookstore)
+> [kjearno.github.io/bookstore](https://kjearno.github.io/bookstore)
 
 #### Cart:
 
-> [komilt.github.io/bookstore/cart](https://komilt.github.io/bookstore/cart)
+> [kjearno.github.io/bookstore/cart](https://kjearno.github.io/bookstore/cart)
 
 #### 404:
 
-> [komilt.github.io/bookstore/:anything](https://komilt.github.io/bookstore/:anything)
+> [kjearno.github.io/bookstore/:anything](https://kjearno.github.io/bookstore/:anything)
 
 ## server
 
