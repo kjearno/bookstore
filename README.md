@@ -53,12 +53,12 @@ $ npm run deploy
 
 - Home:
 
-  [kjearno.github.io/bookstore](https://kjearno.github.io/bookstore)
+  [/#/](https://kjearno.github.io/bookstore/#/)
 
 - Cart:
 
-  [kjearno.github.io/bookstore/cart](https://kjearno.github.io/bookstore/cart)
+  [/#/cart](https://kjearno.github.io/bookstore/#/cart)
 
 - 404:
 
-  [kjearno.github.io/bookstore/:anything](https://kjearno.github.io/bookstore/:anything)
+  [/#/:anything](https://kjearno.github.io/bookstore/#/:anything)
