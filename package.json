@@ -17,7 +17,6 @@
     "prop-types": "^15.7.2",
     "rc-pagination": "^3.1.6",
     "react": "^17.0.1",
-    "react-app-polyfill": "^2.0.0",
     "react-confirm-alert": "^2.7.0",
     "react-dom": "^17.0.1",
     "react-flexbox-grid": "^2.1.2",
