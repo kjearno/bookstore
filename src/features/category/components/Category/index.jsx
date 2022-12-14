@@ -3,7 +3,7 @@ import { Row, Col } from "react-flexbox-grid";
 import { Element } from "react-scroll";
 import VisibilitySensor from "react-visibility-sensor";
 
-import { Pagination } from "@shared/components";
+import { Pagination } from "@components/Pagination";
 import { usePage } from "../../hooks";
 import { renderContent } from "./renderContent";
 import styles from "./Category.module.scss";

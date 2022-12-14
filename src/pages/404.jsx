@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Redirector } from "@shared/components";
-import { CommonTemplate } from "@shared/templates";
+
+import { Redirector } from "@components/Redirector";
+import { CommonTemplate } from "@components/templates";
 
 export default function NotFound() {
   return (

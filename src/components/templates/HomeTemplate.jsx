@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
-import { Announcement, Header, Sidebar } from "@shared/components";
+import { Announcement } from "@components/Announcement";
+import { Header } from "@components/Header";
+import { Sidebar } from "@components/Sidebar";
 import styles from "./HomeTemplate.module.scss";
 
 export function HomeTemplate({ children }) {

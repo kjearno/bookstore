@@ -7,6 +7,8 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:import/recommended",
   ],
   overrides: [],
@@ -23,8 +25,11 @@ module.exports = {
     "import/resolver": {
       alias: {
         map: [
+          ["@assets", "./src/assets"],
+          ["@components", "./src/components"],
           ["@features", "./src/features"],
           ["@shared", "./src/shared"],
+          ["@styles", "./src/styles"],
         ],
         extensions: [".ts", ".js", ".jsx", ".json"],
       },

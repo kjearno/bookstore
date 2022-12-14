@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Loader, Redirector } from "@shared/components";
+import { Loader } from "@components/Loader";
+import { Redirector } from "@components/Redirector";
 import { useCart } from "../../hooks";
 import { Product } from "./Product";
 import styles from "./CartTable.module.scss";

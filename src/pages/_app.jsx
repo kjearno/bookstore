@@ -1,11 +1,11 @@
-import "@shared/styles/globals.scss";
+import "@styles/globals.scss";
 import React from "react";
 import { Helmet } from "react-helmet";
 import { renderRoutes } from "react-router-config";
 import { HashRouter } from "react-router-dom";
 import { ToastProvider } from "react-toast-notifications";
 
-import { ScrollToTop } from "@shared/components";
+import { ScrollToTop } from "@components/ScrollToTop";
 import routes from "./_routes";
 
 export default function App() {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import { CommonTemplate } from "@components/templates";
 import { CartTable } from "@features/cart";
-import styles from "@shared/styles/Cart.module.scss";
-import { CommonTemplate } from "@shared/templates";
+import styles from "@styles/Cart.module.scss";
 
 export default function Cart() {
   return (

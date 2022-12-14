@@ -1,6 +1,7 @@
 import React from "react";
 import { Col } from "react-flexbox-grid";
-import { Book } from "@shared/components";
+
+import { Book } from "@components/Book";
 
 export const renderContent = ({ books, isLoading, pageSize }) => {
   let items = books.map((book) => (

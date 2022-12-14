@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+
 import { useProduct } from "../../hooks";
 import styles from "./Product.module.scss";
 
