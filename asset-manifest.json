@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bookstore/static/css/main.712aae64.chunk.css",
+    "main.css": "/bookstore/static/css/main.597c37ae.chunk.css",
     "main.js": "/bookstore/static/js/main.18d7ab98.chunk.js",
     "main.js.map": "/bookstore/static/js/main.18d7ab98.chunk.js.map",
     "runtime-main.js": "/bookstore/static/js/runtime-main.aeab39fd.js",
@@ -10,7 +10,7 @@
     "static/js/2.79c30b52.chunk.js.map": "/bookstore/static/js/2.79c30b52.chunk.js.map",
     "index.html": "/bookstore/index.html",
     "static/css/2.2f0b74ce.chunk.css.map": "/bookstore/static/css/2.2f0b74ce.chunk.css.map",
-    "static/css/main.712aae64.chunk.css.map": "/bookstore/static/css/main.712aae64.chunk.css.map",
+    "static/css/main.597c37ae.chunk.css.map": "/bookstore/static/css/main.597c37ae.chunk.css.map",
     "static/js/2.79c30b52.chunk.js.LICENSE.txt": "/bookstore/static/js/2.79c30b52.chunk.js.LICENSE.txt",
     "static/media/banner.f8c14c15.png": "/bookstore/static/media/banner.f8c14c15.png",
     "static/media/cart.ffee8bd2.svg": "/bookstore/static/media/cart.ffee8bd2.svg"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.aeab39fd.js",
     "static/css/2.2f0b74ce.chunk.css",
     "static/js/2.79c30b52.chunk.js",
-    "static/css/main.712aae64.chunk.css",
+    "static/css/main.597c37ae.chunk.css",
     "static/js/main.18d7ab98.chunk.js"
   ]
 }
