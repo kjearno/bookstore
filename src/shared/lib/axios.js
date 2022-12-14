@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://bookstore-73510.herokuapp.com/api",
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 export { instance as axios };
